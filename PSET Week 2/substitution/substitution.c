@@ -23,17 +23,18 @@ int main(int argc, string argv[])
     {
         string key = argv[1];
         int n = strlen(argv[1]);
+        // Compare each value of the string to check for duplicates
         for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < i; j++)
             {
-                for (int j = 0; j < i; j++)
+                if (key[i] == key[j])
                 {
-                    if ( key[i] == key[j])
-                    {
-                        printf("Each letter on the key must apper only once\n");
-                        return 1;
-                    }
+                    printf("Each letter on the key must apper only once\n");
+                    return 1;
                 }
             }
+        }
 
         // Ask input text from user
         string plaintext = get_string("plaintext: ");
