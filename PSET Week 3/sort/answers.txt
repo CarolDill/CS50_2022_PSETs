@@ -1,0 +1,19 @@
+sort1 uses: Bubble
+
+How do you know?: For random numbers, it takes more time than both sort 2 and 3. Sort 2 shows a great difference in time when handling
+random and reversed numbers, sorting them really faster then sorts 1 and 3, showing that sort 2 is merge, the fastest in these scenarios.
+However, when handling sorted numbers, sort 1 (Bubble), shows its advantage in time, given that it iterates through the data only once. The
+larger the database, the better it is when compared to sort 3 (Selection). When Bubble handles the best case scenario, as presented in sorted.txt,
+it has an omega of n, which is better than the best case scenario for Selection, which it would still be omega of n square.
+
+sort2 uses: Merge
+
+How do you know?: This sort is the fastest when handling random and reversed data, showing a large diffence in time compared to both sorts 1 and
+2. When handling the sorted data, however, it takes longer then sort 1 (Bubble). This shows that sort 1 is Bubble, because it has a best case
+scenario of omega of n, while sort 2 (Merge) has omega of n log n.
+
+sort3 uses: Selection
+
+How do you know?: Based on the times to handle sorted data, sort 3 is selection sort method. It takes longer to organize sorted data than
+sort 1 (Bubble), that has a omega of n. Selection has a omega of n square even in the best case. Therefore, the larger the data, the longer it
+takes, as shown when handling sorted50000.txt.
